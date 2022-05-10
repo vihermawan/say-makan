@@ -88,7 +88,7 @@ export default function Home() {
         <Flex alignItems="center" justifyContent="center" mb="60px" mt="20px">
           <Flex
             direction="column"
-            w="full"
+            w="445px"
             background="transparent"
             borderRadius="15px"
             py="40px"
