@@ -35,11 +35,7 @@ export default function Home() {
           title: 'Masukkan Kritik dan Saran',
           description:
             'Website ini merupakan wadah untuk menyampaikan kritikan terhadap makanan yang telah disediakan',
-          images: [
-            {
-
-            },
-          ],
+          images: [{}],
           site_name: 'Saymakan.co.id',
         }}
       />
@@ -84,7 +80,9 @@ export default function Home() {
             mb="26px"
             w={{ base: '100%', sm: '90%', lg: '40%', xl: '30%' }}
           >
-            Kritik dan saran anda terhadap makanan kami akan sangat membantu untuk berkembangnya kami ke depannya dalam menyajikan pelayanan terbaik.
+            Kritik dan saran anda terhadap makanan kami akan sangat membantu
+            untuk berkembangnya kami ke depannya dalam menyajikan pelayanan
+            terbaik.
           </Text>
         </Flex>
         <Flex alignItems="center" justifyContent="center" mb="60px" mt="20px">
@@ -100,7 +98,7 @@ export default function Home() {
             boxShadow="0 20px 27px 0 rgb(0 0 0 / 5%)"
           >
             <Formik
-              initialValues={{ critics: '', suggest : '' }}
+              initialValues={{ critics: '', suggest: '' }}
               onSubmit={(values) => {
                 submitData(values)
               }}
@@ -111,9 +109,9 @@ export default function Home() {
                     <FormLabel ms="4px" fontSize="sm" fontWeight="normal">
                       Pilih jenis catering
                     </FormLabel>
-                    <Select placeholder='Pilih jenis catering'>
-                      <option value='Daily Fit Meals'>Daily Fit Meals</option>
-                      <option value='Clean Calories'>Clean Calories</option>
+                    <Select placeholder="Pilih jenis catering">
+                      <option value="Daily Fit Meals">Daily Fit Meals</option>
+                      <option value="Clean Calories">Clean Calories</option>
                     </Select>
                     <FormLabel fontSize="sm" fontWeight="normal" mt="4">
                       Kritik
@@ -121,7 +119,9 @@ export default function Home() {
                     <Field name="critics" validate={validation.Required}>
                       {({ field, form }) => (
                         <FormControl
-                          isInvalid={form.errors.critics && form.touched.critics}
+                          isInvalid={
+                            form.errors.critics && form.touched.critics
+                          }
                         >
                           <Textarea
                             fontSize="sm"
@@ -145,7 +145,9 @@ export default function Home() {
                     <Field name="suggest" validate={validation.Required}>
                       {({ field, form }) => (
                         <FormControl
-                          isInvalid={form.errors.suggest && form.touched.suggest}
+                          isInvalid={
+                            form.errors.suggest && form.touched.suggest
+                          }
                         >
                           <Textarea
                             fontSize="sm"

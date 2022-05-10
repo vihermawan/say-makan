@@ -1,10 +1,9 @@
 import '../styles/globals.css'
 import { createBreakpoints } from '@chakra-ui/theme-tools'
-import { ChakraProvider,extendTheme } from "@chakra-ui/react";
-import Fonts from 'lib/Font';
+import { ChakraProvider, extendTheme } from '@chakra-ui/react'
+import Fonts from 'lib/Font'
 
 function MyApp({ Component, pageProps }) {
-
   const breakpoints = createBreakpoints({
     sm: '320px',
     md: '768px',
@@ -12,20 +11,20 @@ function MyApp({ Component, pageProps }) {
     xl: '1200px',
     '2xl': '1272px',
     '3xl': '1880px',
-    '4xl' : '1900px'
+    '4xl': '1900px',
   })
 
   const theme = extendTheme({
     fonts: {
-      heading: "Poppins",
-      body: "Poppins-Normal",
+      heading: 'Poppins',
+      body: 'Poppins-Normal',
     },
-    breakpoints
+    breakpoints,
   })
 
   return (
     <ChakraProvider theme={theme}>
-       <Fonts />
+      <Fonts />
       <Component {...pageProps} />
     </ChakraProvider>
   )

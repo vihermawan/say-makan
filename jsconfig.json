@@ -7,7 +7,7 @@
       "@/styles/*": ["styles/*"],
       "@/data/*": ["data/*"],
       "@/lib/*": ["lib/*"],
-      "@/common/*": ["common/*"],
+      "@/common/*": ["common/*"]
     }
   }
 }
